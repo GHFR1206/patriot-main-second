@@ -18,9 +18,9 @@ class AuthController extends Controller
         $d = $r->validate(['email'=>'required|email','password'=>'required']);
         if (Auth::attempt($d, $r->boolean('remember'))) {
             $r->session()->regenerate();
-            return redirect()->intended(route('dashboard'))->with('success','Welcome back, racer! 🏁');
+            return redirect()->intended(route('dashboard'))->with('success','Selamat datang kembali, pembalap! 🏁');
         }
-        return back()->withErrors(['email'=>'Wrong email or password'])->onlyInput('email');
+        return back()->withErrors(['email'=>'Email atau kata sandi salah'])->onlyInput('email');
     }
 
     public function register(Request $r)
@@ -55,7 +55,7 @@ class AuthController extends Controller
             'color'=>['#FF6B6B','#4ECDC4','#A78BFA','#FFE66D','#FF6B9D'][array_rand(['#FF6B6B','#4ECDC4','#A78BFA','#FFE66D','#FF6B9D'])],
         ]);
         Auth::login($user);
-        return redirect(route('dashboard'))->with('success','Team registered! Let\'s build your robot 🤖');
+        return redirect(route('dashboard'))->with('success','Tim berhasil didaftarkan! Ayo bangun robotmu 🤖');
     }
 
     public function logout(Request $r)
@@ -63,6 +63,6 @@ class AuthController extends Controller
         Auth::logout();
         $r->session()->invalidate();
         $r->session()->regenerateToken();
-        return redirect(route('home'))->with('success','See you next race! 👋');
+        return redirect(route('home'))->with('success','Sampai jumpa di balapan selanjutnya! 👋');
     }
 }

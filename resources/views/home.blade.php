@@ -1,23 +1,23 @@
 @extends('layouts.app')
-@section('title','RoboRace — Build it. Code it. Race it!')
+@section('title','RoboRace — Rakit. Kode. Balapan!')
 
 @section('content')
 <section class="max-w-6xl mx-auto px-4 pt-6 md:pt-8">
   <div class="grid md:grid-cols-2 gap-6 items-center">
     <div class="order-2 md:order-1">
       <div class="inline-flex items-center gap-2 bg-white border-[3px] border-[#2D3436] rounded-full px-3 py-1.5 font-black text-xs shadow-[0_3px_0_0_#2D3436] animate-pop">
-        <span class="w-2 h-2 rounded-full bg-[#4ECDC4] animate-pulse"></span> REGISTRATIONS OPEN — JOIN 120+ KIDS
-        <span class="hidden sm:inline-flex bg-[#FFE66D] border-2 border-[#2D3436] rounded-full px-2 py-0.5">FREE TO JOIN!</span>
+        <span class="w-2 h-2 rounded-full bg-[#4ECDC4] animate-pulse"></span> PENDAFTARAN DIBUKA — 120+ ANAK BERGABUNG
+        <span class="hidden sm:inline-flex bg-[#FFE66D] border-2 border-[#2D3436] rounded-full px-2 py-0.5">GRATIS!</span>
       </div>
       <h1 class="font-display font-black text-[40px] md:text-[56px] leading-[0.9] tracking-tight mt-4">
-        <span class="inline-block animate-slideUp">Build it.</span><br>
-        <span class="inline-block animate-slideUp" style="animation-delay:.08s">Code it.</span><br>
-        <span class="inline-block text-[#FF6B6B] relative animate-slideUp" style="animation-delay:.16s">Race it! <span class="absolute -right-8 -top-2 text-2xl animate-wiggle">🚀</span></span>
+        <span class="inline-block animate-slideUp">Rakit.</span><br>
+        <span class="inline-block animate-slideUp" style="animation-delay:.08s">Kode.</span><br>
+        <span class="inline-block text-[#FF6B6B] relative animate-slideUp" style="animation-delay:.16s">Balapan! <span class="absolute -right-8 -top-2 text-2xl animate-wiggle">🚀</span></span>
       </h1>
-      <p class="mt-4 text-[17px] leading-relaxed font-bold opacity-80 max-w-[480px]">Line follower robots, wild tracks, cheering friends! Pick a challenge, build your bot, and chase the finish line.</p>
+      <p class="mt-4 text-[17px] leading-relaxed font-bold opacity-80 max-w-[480px]">Robot line follower, lintasan seru, teman-teman yang bersorak! Pilih tantanganmu, bangun robotmu, dan kejar garis finis.</p>
       <div class="flex flex-wrap gap-3 mt-6">
-        <a href="{{ route('register') }}" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#FF6B6B] text-white font-black text-[15px] border-[3px] border-[#2D3436] shadow-[0_6px_0_0_#2D3436] hover:shadow-[0_4px_0_0_#2D3436] hover:translate-y-[2px] transition">Register Team 🤖</a>
-        <a href="{{ route('challenges.index') }}" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white font-black text-[15px] border-[3px] border-[#2D3436] shadow-[0_6px_0_0_#2D3436] hover:shadow-[0_4px_0_0_#2D3436] hover:translate-y-[2px] transition">See Challenges 👀</a>
+        <a href="{{ route('register') }}" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#FF6B6B] text-white font-black text-[15px] border-[3px] border-[#2D3436] shadow-[0_6px_0_0_#2D3436] hover:shadow-[0_4px_0_0_#2D3436] hover:translate-y-[2px] transition">Daftarkan Tim 🤖</a>
+        <a href="{{ route('challenges.index') }}" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white font-black text-[15px] border-[3px] border-[#2D3436] shadow-[0_6px_0_0_#2D3436] hover:shadow-[0_4px_0_0_#2D3436] hover:translate-y-[2px] transition">Lihat Tantangan 👀</a>
       </div>
       <div class="flex items-center gap-3 mt-6">
         <div class="flex -space-x-2">
@@ -25,14 +25,14 @@
           <span class="w-9 h-9 rounded-full bg-[#4ECDC4] border-2 border-[#2D3436] flex items-center justify-center">👧</span>
           <span class="w-9 h-9 rounded-full bg-[#FF6B9D] border-2 border-[#2D3436] flex items-center justify-center">🧑</span>
         </div>
-        <div class="text-sm font-extrabold leading-tight">Trusted by <b>40+ schools</b><br><span class="opacity-60">Ages 7-15 · Teams of 2-4</span></div>
+        <div class="text-sm font-extrabold leading-tight">Dipercaya <b>40+ sekolah</b><br><span class="opacity-60">Usia 7-15 · Tim 2-4 orang</span></div>
       </div>
     </div>
     <div class="order-1 md:order-2 relative">
       <div class="bg-white rounded-[32px] border-[3px] border-[#2D3436] bubble-shadow p-4 md:p-6 relative overflow-hidden">
         <div class="absolute inset-0 pointer-events-none opacity-[0.07]" style="background: radial-gradient(circle at 20% 20%, #FF6B6B 2px, transparent 2px) 0 0 / 22px 22px, radial-gradient(circle at 80% 80%, #4ECDC4 2px, transparent 2px) 0 0 / 28px 28px;"></div>
         <div class="flex items-center justify-between">
-          <span class="bg-[#2D3436] text-white text-xs font-black rounded-full px-3 py-1">LIVE TRACK PREVIEW</span>
+          <span class="bg-[#2D3436] text-white text-xs font-black rounded-full px-3 py-1">PRATINJAU LINTASAN LANGSUNG</span>
           <span class="w-2.5 h-2.5 rounded-full bg-[#FF6B6B] animate-pulse border-2 border-[#2D3436]"></span>
         </div>
         <div class="mt-4 relative bg-[#FFF0C8] rounded-[20px] border-[3px] border-[#2D3436] p-4 overflow-hidden">
@@ -48,18 +48,18 @@
             <g><circle cx="290" cy="120" r="10" fill="#4ECDC4" stroke="#2D3436" stroke-width="2"/><text x="290" y="124" text-anchor="middle" font-size="9">🏁</text></g>
           </svg>
           <div class="flex gap-2 mt-3 flex-wrap">
-            <span class="bg-white border-2 border-[#2D3436] rounded-full px-3 py-1 text-xs font-black">⚡ 1.2m straight</span>
-            <span class="bg-[#4ECDC4] border-2 border-[#2D3436] rounded-full px-3 py-1 text-xs font-black text-white">↩ sharp turn</span>
-            <span class="bg-[#FFE66D] border-2 border-[#2D3436] rounded-full px-3 py-1 text-xs font-black">⛰ ramp</span>
+            <span class="bg-white border-2 border-[#2D3436] rounded-full px-3 py-1 text-xs font-black">⚡ lintasan lurus 1,2 m</span>
+            <span class="bg-[#4ECDC4] border-2 border-[#2D3436] rounded-full px-3 py-1 text-xs font-black text-white">↩ belokan tajam</span>
+            <span class="bg-[#FFE66D] border-2 border-[#2D3436] rounded-full px-3 py-1 text-xs font-black">⛰ tanjakan</span>
           </div>
         </div>
         <div class="grid grid-cols-3 gap-2 mt-4">
-          <div class="bg-[#FFE66D] border-2 border-[#2D3436] rounded-2xl p-3 text-center"><div class="text-xl">⏱</div><div class="font-black text-sm">Fastest</div><div class="font-black text-lg leading-none">12.43s</div><div class="text-xs font-bold opacity-60">Team Sparks</div></div>
-          <div class="bg-[#4ECDC4] border-2 border-[#2D3436] rounded-2xl p-3 text-center text-white"><div class="text-xl">🏆</div><div class="font-black text-sm">Top Score</div><div class="font-black text-lg leading-none">298 pts</div><div class="text-xs font-bold opacity-80">RoboRangers</div></div>
-          <div class="bg-[#FF6B9D] border-2 border-[#2D3436] rounded-2xl p-3 text-center text-white"><div class="text-xl">🤖</div><div class="font-black text-sm">Teams</div><div class="font-black text-lg leading-none">48</div><div class="text-xs font-bold opacity-80">and growing!</div></div>
+          <div class="bg-[#FFE66D] border-2 border-[#2D3436] rounded-2xl p-3 text-center"><div class="text-xl">⏱</div><div class="font-black text-sm">Tercepat</div><div class="font-black text-lg leading-none">12,43 dtk</div><div class="text-xs font-bold opacity-60">Tim Sparks</div></div>
+          <div class="bg-[#4ECDC4] border-2 border-[#2D3436] rounded-2xl p-3 text-center text-white"><div class="text-xl">🏆</div><div class="font-black text-sm">Skor Tertinggi</div><div class="font-black text-lg leading-none">298 poin</div><div class="text-xs font-bold opacity-80">RoboRangers</div></div>
+          <div class="bg-[#FF6B9D] border-2 border-[#2D3436] rounded-2xl p-3 text-center text-white"><div class="text-xl">🤖</div><div class="font-black text-sm">Jumlah Tim</div><div class="font-black text-lg leading-none">48</div><div class="text-xs font-bold opacity-80">dan terus bertambah!</div></div>
         </div>
       </div>
-      <div class="absolute -bottom-3 -left-2 bg-[#A78BFA] text-white border-[3px] border-[#2D3436] rounded-2xl px-4 py-2 font-black text-sm shadow-[0_4px_0_0_#2D3436] rotate-[-2deg] hidden md:flex items-center gap-2">3 challenges · prizes for all! 🎉</div>
+      <div class="absolute -bottom-3 -left-2 bg-[#A78BFA] text-white border-[3px] border-[#2D3436] rounded-2xl px-4 py-2 font-black text-sm shadow-[0_4px_0_0_#2D3436] rotate-[-2deg] hidden md:flex items-center gap-2">3 tantangan · hadiah untuk semua! 🎉</div>
     </div>
   </div>
 </section>
@@ -67,11 +67,11 @@
 <section class="max-w-6xl mx-auto px-4 mt-10">
   <div class="flex items-end justify-between gap-4">
     <div>
-      <div class="inline-flex items-center gap-2 bg-[#FFE66D] border-2 border-[#2D3436] rounded-full px-3 py-1 font-black text-xs">CHOOSE YOUR ADVENTURE</div>
-      <h2 class="font-display font-black text-[30px] md:text-[36px] leading-none mt-2">3 Wild Challenges</h2>
-      <p class="font-bold opacity-70 mt-1">Each track tests different superpowers — speed, brains, balance!</p>
+      <div class="inline-flex items-center gap-2 bg-[#FFE66D] border-2 border-[#2D3436] rounded-full px-3 py-1 font-black text-xs">PILIH PETUALANGANMU</div>
+      <h2 class="font-display font-black text-[30px] md:text-[36px] leading-none mt-2">3 Tantangan Seru</h2>
+      <p class="font-bold opacity-70 mt-1">Setiap lintasan menguji kekuatan super berbeda — kecepatan, kecerdasan, keseimbangan!</p>
     </div>
-    <a href="{{ route('challenges.index') }}" class="hidden md:inline-flex px-5 py-2.5 rounded-full bg-white border-[3px] border-[#2D3436] font-black text-sm shadow-[0_4px_0_0_#2D3436]">View all →</a>
+    <a href="{{ route('challenges.index') }}" class="hidden md:inline-flex px-5 py-2.5 rounded-full bg-white border-[3px] border-[#2D3436] font-black text-sm shadow-[0_4px_0_0_#2D3436]">Lihat semua →</a>
   </div>
 
   <div class="grid md:grid-cols-3 gap-5 mt-6">
@@ -82,7 +82,7 @@
         <div class="absolute left-4 top-4 w-14 h-14 rounded-2xl bg-white border-[3px] border-[#2D3436] flex items-center justify-center text-3xl shadow-[0_4px_0_0_#2D3436] group-hover:animate-wiggle">{{ $c->icon }}</div>
         <span class="absolute right-4 top-4 bg-white border-2 border-[#2D3436] rounded-full px-3 py-1 text-xs font-black capitalize
           @if($c->difficulty==='easy') bg-[#95E1D3] @elseif($c->difficulty==='medium') bg-[#FFE66D] @else bg-[#FF6B6B] text-white @endif">
-          {{ $c->difficulty }} · {{ $c->max_points }} pts
+          {{ $c->difficulty==='easy' ? 'mudah' : ($c->difficulty==='medium' ? 'sedang' : 'sulit') }} · {{ $c->max_points }} poin
         </span>
         <div class="absolute bottom-0 left-0 right-0 h-6 bg-white rounded-t-[20px] border-t-[3px] border-[#2D3436]/10"></div>
       </div>
@@ -95,8 +95,8 @@
           @endforeach
         </div>
         <div class="flex items-center justify-between mt-4">
-          <span class="text-xs font-black opacity-60">⏱ {{ $c->max_time_seconds }}s max</span>
-          <span class="inline-flex items-center gap-1 bg-[#2D3436] text-white rounded-full px-3 py-1.5 text-xs font-black">Try it <span class="group-hover:translate-x-1 transition">→</span></span>
+          <span class="text-xs font-black opacity-60">⏱ maks {{ $c->max_time_seconds }} dtk</span>
+          <span class="inline-flex items-center gap-1 bg-[#2D3436] text-white rounded-full px-3 py-1.5 text-xs font-black">Coba <span class="group-hover:translate-x-1 transition">→</span></span>
         </div>
       </div>
     </a>
@@ -110,10 +110,10 @@
     <div class="absolute -bottom-8 -left-8 w-32 h-32 rounded-full bg-[#4ECDC4] opacity-20"></div>
     <div class="relative grid md:grid-cols-4 gap-6">
       <div class="md:col-span-1">
-        <div class="inline-flex bg-[#FFE66D] text-[#2D3436] border-2 border-white rounded-full px-3 py-1 font-black text-xs">HOW IT WORKS</div>
-        <h3 class="font-display font-black text-2xl leading-none mt-3">3 steps to<br>race day!</h3>
+        <div class="inline-flex bg-[#FFE66D] text-[#2D3436] border-2 border-white rounded-full px-3 py-1 font-black text-xs">CARA KERJA</div>
+        <h3 class="font-display font-black text-2xl leading-none mt-3">3 langkah<br>menuju hari lomba!</h3>
       </div>
-      @php $steps=[['n'=>'01','t'=>'Form a team','d'=>'2-4 friends, pick a robot name & school','c'=>'#FF6B6B','e'=>'👥'],['n'=>'02','t'=>'Build & code','d'=>'Line sensor + motors, keep it on the line!','c'=>'#4ECDC4','e'=>'🔧'],['n'=>'03','t'=>'Race & cheer','d'=>'Clock stops, points up, crowd goes wild!','c'=>'#FFE66D','e'=>'🏁']]; @endphp
+      @php $steps=[['n'=>'01','t'=>'Bentuk tim','d'=>'2-4 teman, pilih nama robot & sekolah','c'=>'#FF6B6B','e'=>'👥'],['n'=>'02','t'=>'Rakit & kode','d'=>'Sensor garis + motor, jaga tetap di garis!','c'=>'#4ECDC4','e'=>'🔧'],['n'=>'03','t'=>'Balapan & sorak','d'=>'Waktu berhenti, poin naik, penonton bersorak!','c'=>'#FFE66D','e'=>'🏁']]; @endphp
       @foreach($steps as $s)
       <div class="bg-white text-[#2D3436] rounded-[20px] border-[3px] border-white p-4 relative">
         <div class="w-8 h-8 rounded-full flex items-center justify-center font-black text-sm border-2 border-[#2D3436]" style="background: {{ $s['c'] }}">{{ $s['n'] }}</div>
@@ -129,8 +129,8 @@
 <section class="max-w-6xl mx-auto px-4 mt-10 grid md:grid-cols-5 gap-6">
   <div class="md:col-span-3 bg-white rounded-[28px] border-[3px] border-[#2D3436] bubble-shadow-sm p-6">
     <div class="flex items-center justify-between">
-      <h3 class="font-display font-black text-xl flex items-center gap-2"><span class="w-8 h-8 rounded-xl bg-[#4ECDC4] flex items-center justify-center border-2 border-[#2D3436] text-white">🏆</span> Live Mini Board</h3>
-      <a href="{{ route('leaderboard') }}" class="text-xs font-black bg-[#FFE66D] border-2 border-[#2D3436] rounded-full px-3 py-1.5">Full board →</a>
+      <h3 class="font-display font-black text-xl flex items-center gap-2"><span class="w-8 h-8 rounded-xl bg-[#4ECDC4] flex items-center justify-center border-2 border-[#2D3436] text-white">🏆</span> Papan Skor Mini Langsung</h3>
+      <a href="{{ route('leaderboard') }}" class="text-xs font-black bg-[#FFE66D] border-2 border-[#2D3436] rounded-full px-3 py-1.5">Lihat lengkap →</a>
     </div>
     <div class="mt-4 space-y-2">
       @forelse($topTeams ?? [] as $i=>$t)
@@ -142,26 +142,26 @@
           <div class="text-xs font-bold opacity-60 truncate">{{ $t->school }}</div>
         </div>
         <div class="text-right">
-          <div class="font-black text-sm">{{ $t->total_points }} pts</div>
-          <div class="text-xs font-bold opacity-60">{{ $t->best_time ? $t->best_time.'s': '—' }}</div>
+          <div class="font-black text-sm">{{ $t->total_points }} poin</div>
+          <div class="text-xs font-bold opacity-60">{{ $t->best_time ? $t->best_time.' dtk': '—' }}</div>
         </div>
       </div>
       @empty
-      <div class="text-center py-8 font-bold opacity-60">No scores yet — be the first! 🚀<br><a href="{{ route('register') }}" class="underline">Register team</a></div>
+      <div class="text-center py-8 font-bold opacity-60">Belum ada skor — jadi yang pertama! 🚀<br><a href="{{ route('register') }}" class="underline">Daftarkan tim</a></div>
       @endforelse
     </div>
   </div>
   <div class="md:col-span-2 bg-gradient-to-br from-[#FF6B6B] to-[#FFE66D] rounded-[28px] border-[3px] border-[#2D3436] p-6 text-[#2D3436] relative overflow-hidden">
     <div class="absolute -right-6 -bottom-6 text-[120px] opacity-10 rotate-12">🤖</div>
-    <h3 class="font-display font-black text-2xl leading-none">Ready to roll?</h3>
-    <p class="font-bold opacity-80 mt-2 text-sm leading-relaxed">Grab your team, pick a challenge, build the fastest follower on the block.</p>
+    <h3 class="font-display font-black text-2xl leading-none">Siap berangkat?</h3>
+    <p class="font-bold opacity-80 mt-2 text-sm leading-relaxed">Kumpulkan timmu, pilih tantangan, buat robot pengikut garis tercepat.</p>
     <ul class="mt-4 space-y-2 text-sm font-black">
-      <li class="flex items-center gap-2"><span class="w-6 h-6 rounded-full bg-white border-2 border-[#2D3436] flex items-center justify-center text-xs">✓</span> All materials provided</li>
-      <li class="flex items-center gap-2"><span class="w-6 h-6 rounded-full bg-white border-2 border-[#2D3436] flex items-center justify-center text-xs">✓</span> Judges help you learn</li>
-      <li class="flex items-center gap-2"><span class="w-6 h-6 rounded-full bg-white border-2 border-[#2D3436] flex items-center justify-center text-xs">✓</span> Prizes for every team!</li>
+      <li class="flex items-center gap-2"><span class="w-6 h-6 rounded-full bg-white border-2 border-[#2D3436] flex items-center justify-center text-xs">✓</span> Semua bahan disediakan</li>
+      <li class="flex items-center gap-2"><span class="w-6 h-6 rounded-full bg-white border-2 border-[#2D3436] flex items-center justify-center text-xs">✓</span> Juri siap membantu belajar</li>
+      <li class="flex items-center gap-2"><span class="w-6 h-6 rounded-full bg-white border-2 border-[#2D3436] flex items-center justify-center text-xs">✓</span> Hadiah untuk setiap tim!</li>
     </ul>
-    <a href="{{ route('register') }}" class="mt-6 inline-flex w-full justify-center px-6 py-3.5 rounded-full bg-[#2D3436] text-white font-black border-[3px] border-[#2D3436] shadow-[0_4px_0_0_rgba(0,0,0,0.2)]">Join the Race — It’s Free! 🎉</a>
-    <div class="text-center text-xs font-black opacity-60 mt-2">Takes 2 minutes · No credit card</div>
+    <a href="{{ route('register') }}" class="mt-6 inline-flex w-full justify-center px-6 py-3.5 rounded-full bg-[#2D3436] text-white font-black border-[3px] border-[#2D3436] shadow-[0_4px_0_0_rgba(0,0,0,0.2)]">Ikut Lomba — Gratis! 🎉</a>
+    <div class="text-center text-xs font-black opacity-60 mt-2">Cuma 2 menit · Tanpa kartu kredit</div>
   </div>
 </section>
 @endsection

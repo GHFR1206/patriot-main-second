@@ -11,12 +11,12 @@ class ScoresTable
     {
         return $table
             ->columns([
-                TextColumn::make('team.name')->searchable()->weight('bold')->label('Team'),
-                TextColumn::make('challenge.name')->searchable()->label('Challenge'),
-                TextColumn::make('points')->sortable()->weight('bold')->badge()->color(fn($v)=>$v>=80?'success':($v>=50?'warning':'danger')),
-                TextColumn::make('time_seconds')->label('Time')->suffix('s')->sortable(),
-                TextColumn::make('status')->badge()->color(fn($s)=>match($s){'completed'=>'success','pending'=>'warning','disqualified'=>'danger',default=>'gray'}),
-                TextColumn::make('judge.name')->toggleable(isToggledHiddenByDefault:true),
+                TextColumn::make('team.name')->searchable()->weight('bold')->label('Tim'),
+                TextColumn::make('challenge.name')->searchable()->label('Tantangan'),
+                TextColumn::make('points')->sortable()->weight('bold')->badge()->color(fn($v)=>$v>=80?'success':($v>=50?'warning':'danger'))->label('Poin'),
+                TextColumn::make('time_seconds')->label('Waktu')->suffix(' dtk')->sortable()->formatStateUsing(fn($v)=>$v ? $v.' dtk' : '—'),
+                TextColumn::make('status')->badge()->color(fn($s)=>match($s){'completed'=>'success','pending'=>'warning','disqualified'=>'danger',default=>'gray'})->label('Status')->formatStateUsing(fn($s)=>match($s){'completed'=>'Selesai','pending'=>'Menunggu','disqualified'=>'Didiskualifikasi',default=>$s}),
+                TextColumn::make('judge.name')->toggleable(isToggledHiddenByDefault:true)->label('Juri'),
             ])
             ->filters([])
             ->recordActions([EditAction::make()])

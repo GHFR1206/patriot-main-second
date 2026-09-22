@@ -18,17 +18,17 @@ class DatabaseSeeder extends Seeder
         $judgeRole = Role::firstOrCreate(['name' => 'judge']);
         $partRole = Role::firstOrCreate(['name' => 'participant']);
 
-        $admin = User::firstOrCreate(['email' => 'admin@robotrace.test'], ['name' => 'Admin Robo', 'password' => 'password']);
+        $admin = User::firstOrCreate(['email' => 'admin@robotrace.test'], ['name' => 'Admin Robo', 'password' => 'admin']);
         $admin->assignRole($adminRole);
-        $judge = User::firstOrCreate(['email' => 'judge@robotrace.test'], ['name' => 'Judge Sparky', 'password' => 'password']);
+        $judge = User::firstOrCreate(['email' => 'judge@robotrace.test'], ['name' => 'Judge Sparky', 'password' => 'judge']);
         $judge->assignRole($judgeRole);
 
         $challenges = [
             [
-                'name' => 'Speed Dash',
+                'name' => 'Sprint Cepat',
                 'slug' => 'speed-dash',
-                'description' => "Zoom! A straight sprint with gentle curves. Perfect first race — keep the line, chase the clock. Finish = instant cheers!",
-                'short_description' => 'Straight sprint, gentle curves — perfect first race!',
+                'description' => "Ngebut! Lintasan lurus dengan tikungan halus. Balapan pertama yang sempurna — tetap di garis, kejar waktu. Finis = sorak sorai langsung!",
+                'short_description' => 'Lintasan lurus, tikungan halus — balapan pertama yang sempurna!',
                 'icon' => '⚡',
                 'color' => '#FFE66D',
                 'gradient_from' => '#FFE66D',
@@ -36,16 +36,16 @@ class DatabaseSeeder extends Seeder
                 'difficulty' => 'easy',
                 'max_time_seconds' => 60,
                 'max_points' => 100,
-                'obstacles' => ['Long straight', 'Gentle S-curve', 'Finish gate'],
-                'rules' => "• Stay on black line (white floor)\n• 60 seconds max\n• Off track = −5 pts, must re-enter where left\n• Fastest clean run wins\n• Judge claps you in!",
+                'obstacles' => ['Lintasan lurus panjang', 'Tikungan S halus', 'Gerbang finis'],
+                'rules' => "• Tetap di garis hitam (lantai putih)\n• Maksimal 60 detik\n• Keluar lintasan = −5 poin, masuk kembali di titik keluar\n• Waktu tercepat tanpa penalti menang\n• Juri akan memberi aba-aba!",
                 'sort_order' => 0,
                 'is_active' => true,
             ],
             [
-                'name' => 'Obstacle Maze',
+                'name' => 'Labirin Rintangan',
                 'slug' => 'obstacle-maze',
-                'description' => 'Twists, sharp turns, zigzags! Your bot must think fast and turn tighter. Miss a turn? Reverse, retry, roar!',
-                'short_description' => 'Sharp turns & zigzags — brain + wheels!',
+                'description' => 'Berliku, tikungan tajam, zigzag! Robotmu harus berpikir cepat dan belok presisi. Salah belok? Mundur, coba lagi!',
+                'short_description' => 'Tikungan tajam & zigzag — otak + roda!',
                 'icon' => '🌀',
                 'color' => '#4ECDC4',
                 'gradient_from' => '#4ECDC4',
@@ -53,16 +53,16 @@ class DatabaseSeeder extends Seeder
                 'difficulty' => 'medium',
                 'max_time_seconds' => 120,
                 'max_points' => 120,
-                'obstacles' => ['Sharp 90° turn', 'Zigzag corridor', 'U-turn loop', 'Narrow lane'],
-                'rules' => "• 120 seconds max\n• 4 tricky turns — slow down to stay on line\n• Touching wall = −5 pts\n• Complete all gates\n• Bonus +10 if no penalties!",
+                'obstacles' => ['Belokan tajam 90°', 'Koridor zigzag', 'Loop putar balik', 'Jalur sempit'],
+                'rules' => "• Maksimal 120 detik\n• 4 tikungan sulit — pelan-pelan agar tetap di garis\n• Menyentuh dinding = −5 poin\n• Lewati semua gerbang\n• Bonus +10 jika tanpa penalti!",
                 'sort_order' => 1,
                 'is_active' => true,
             ],
             [
-                'name' => 'Bridge Gap',
+                'name' => 'Jembatan Tantangan',
                 'slug' => 'bridge-gap',
-                'description' => 'The brave track! Up a ramp, across a narrow bridge (line breaks!), down again. Wobble? Balance and believe!',
-                'short_description' => 'Ramp, narrow bridge, line break — brave bots only!',
+                'description' => 'Lintasan pemberani! Naik tanjakan, lewati jembatan sempit (garis terputus!), lalu turun lagi. Goyang? Seimbangkan dan percaya diri!',
+                'short_description' => 'Tanjakan, jembatan sempit, garis terputus — hanya untuk robot pemberani!',
                 'icon' => '🌉',
                 'color' => '#FF6B9D',
                 'gradient_from' => '#FF6B9D',
@@ -70,8 +70,8 @@ class DatabaseSeeder extends Seeder
                 'difficulty' => 'hard',
                 'max_time_seconds' => 150,
                 'max_points' => 150,
-                'obstacles' => ['Incline ramp', 'Narrow bridge', 'Line break (3cm gap)', 'Decline ramp', 'Tight finish'],
-                'rules' => "• 150 seconds max\n• Bridge is 4cm wide — slow & steady!\n• Line gap: bot must go straight 3cm\n• Fall off bridge = retry from ramp base (−10)\n• Finishing this track = hero status!",
+                'obstacles' => ['Tanjakan naik', 'Jembatan sempit', 'Garis terputus (celah 3cm)', 'Tanjakan turun', 'Finis ketat'],
+                'rules' => "• Maksimal 150 detik\n• Jembatan lebar 4cm — pelan & mantap!\n• Celah garis: robot harus lurus 3cm\n• Jatuh dari jembatan = ulangi dari dasar tanjakan (−10)\n• Menyelesaikan lintasan ini = status pahlawan!",
                 'sort_order' => 2,
                 'is_active' => true,
             ],

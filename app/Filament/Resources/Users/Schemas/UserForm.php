@@ -13,10 +13,10 @@ class UserForm
     {
         return $schema
             ->components([
-                TextInput::make('name')->required(),
-                TextInput::make('email')->email()->required()->unique(ignoreRecord: true),
-                TextInput::make('password')->password()->dehydrateStateUsing(fn($s)=>filled($s)?Hash::make($s):null)->dehydrated(fn($s)=>filled($s))->required(fn(string $op)=>$op==='create')->revealable(),
-                Select::make('roles')->relationship('roles','name')->multiple()->preload()->label('Roles'),
+                TextInput::make('name')->required()->label('Nama'),
+                TextInput::make('email')->email()->required()->unique(ignoreRecord: true)->label('Email'),
+                TextInput::make('password')->password()->dehydrateStateUsing(fn($s)=>filled($s)?Hash::make($s):null)->dehydrated(fn($s)=>filled($s))->required(fn(string $op)=>$op==='create')->revealable()->label('Kata Sandi'),
+                Select::make('roles')->relationship('roles','name')->multiple()->preload()->label('Peran'),
             ]);
     }
 }

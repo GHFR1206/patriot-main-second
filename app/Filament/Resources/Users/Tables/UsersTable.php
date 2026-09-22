@@ -14,10 +14,10 @@ class UsersTable
     {
         return $table
             ->columns([
-                TextColumn::make('name')->searchable()->weight('bold'),
-                TextColumn::make('email')->searchable(),
-                TextColumn::make('roles.name')->badge()->color('info'),
-                TextColumn::make('created_at')->dateTime()->sortable()->toggleable(isToggledHiddenByDefault:true),
+                TextColumn::make('name')->searchable()->weight('bold')->label('Nama'),
+                TextColumn::make('email')->searchable()->label('Email'),
+                TextColumn::make('roles.name')->badge()->color('info')->label('Peran'),
+                TextColumn::make('created_at')->dateTime()->sortable()->toggleable(isToggledHiddenByDefault:true)->label('Dibuat'),
             ])
             ->filters([
                 //

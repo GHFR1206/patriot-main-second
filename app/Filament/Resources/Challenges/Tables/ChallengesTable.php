@@ -16,12 +16,12 @@ class ChallengesTable
         return $table
             ->columns([
                 TextColumn::make('icon')->label('')->width('40px'),
-                TextColumn::make('name')->searchable()->weight('bold'),
-                TextColumn::make('difficulty')->badge()->color(fn($state)=>match($state){'easy'=>'success','medium'=>'warning','hard'=>'danger',default=>'gray'}),
-                TextColumn::make('max_points')->sortable(),
-                TextColumn::make('max_time_seconds')->label('Time')->suffix('s')->sortable(),
-                IconColumn::make('is_active')->boolean(),
-                TextColumn::make('sort_order')->sortable(),
+                TextColumn::make('name')->searchable()->weight('bold')->label('Nama'),
+                TextColumn::make('difficulty')->badge()->color(fn($state)=>match($state){'easy'=>'success','medium'=>'warning','hard'=>'danger',default=>'gray'})->label('Tingkat')->formatStateUsing(fn($s)=>match($s){'easy'=>'Mudah','medium'=>'Sedang','hard'=>'Sulit',default=>$s}),
+                TextColumn::make('max_points')->sortable()->label('Poin Maks'),
+                TextColumn::make('max_time_seconds')->label('Waktu')->suffix(' dtk')->sortable(),
+                IconColumn::make('is_active')->boolean()->label('Aktif'),
+                TextColumn::make('sort_order')->sortable()->label('Urutan'),
             ])
             ->filters([])
             ->recordActions([EditAction::make()])

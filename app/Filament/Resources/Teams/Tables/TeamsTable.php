@@ -12,12 +12,12 @@ class TeamsTable
         return $table
             ->columns([
                 TextColumn::make('emoji')->label('')->width('40px'),
-                TextColumn::make('name')->searchable()->weight('bold'),
-                TextColumn::make('school')->searchable()->toggleable(),
-                TextColumn::make('age_group')->badge()->color(fn($s)=>match($s){'junior'=>'info','middle'=>'warning','senior'=>'success',default=>'gray'}),
-                TextColumn::make('robot_name')->searchable(),
-                TextColumn::make('total_points')->sortable()->weight('bold')->badge()->color('success'),
-                TextColumn::make('best_time')->suffix('s')->sortable(),
+                TextColumn::make('name')->searchable()->weight('bold')->label('Nama Tim'),
+                TextColumn::make('school')->searchable()->toggleable()->label('Sekolah'),
+                TextColumn::make('age_group')->badge()->color(fn($s)=>match($s){'junior'=>'info','middle'=>'warning','senior'=>'success',default=>'gray'})->label('Usia')->formatStateUsing(fn($s)=>match($s){'junior'=>'Junior','middle'=>'Menengah','senior'=>'Senior',default=>$s}),
+                TextColumn::make('robot_name')->searchable()->label('Robot'),
+                TextColumn::make('total_points')->sortable()->weight('bold')->badge()->color('success')->label('Total Poin'),
+                TextColumn::make('best_time')->suffix(' dtk')->sortable()->label('Waktu Terbaik'),
             ])
             ->filters([])
             ->recordActions([EditAction::make()])
