@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('contact_email');
             $table->string('contact_phone')->nullable();
             $table->string('avatar')->nullable();
-            $table->string('color')->default('#4ECDC4');
+            $table->string('color')->default('#EAE6FE');
             $table->string('emoji')->default('🤖');
             $table->integer('total_points')->default(0);
             $table->decimal('best_time', 6, 2)->nullable();

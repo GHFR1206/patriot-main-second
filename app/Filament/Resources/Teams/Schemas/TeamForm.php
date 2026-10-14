@@ -21,7 +21,7 @@ class TeamForm
             TextInput::make('contact_email')->email()->required()->label('Email Kontak'),
             TextInput::make('contact_phone')->label('No. HP'),
             TextInput::make('emoji')->default('🤖')->label('Emoji Avatar'),
-            ColorPicker::make('color')->default('#4ECDC4')->label('Warna'),
+            ColorPicker::make('color')->default('#EAE6FE')->label('Warna'),
             TextInput::make('total_points')->numeric()->default(0)->readOnly()->label('Total Poin'),
             TextInput::make('best_time')->numeric()->suffix('detik')->label('Waktu Terbaik'),
             Select::make('user_id')->relationship('user','email')->searchable()->label('Pemilik Akun'),

@@ -15,9 +15,9 @@ return new class extends Migration
             $table->text('description');
             $table->string('short_description')->nullable();
             $table->string('icon')->default('🤖');
-            $table->string('color')->default('#FF6B6B');
-            $table->string('gradient_from')->default('#FF6B6B');
-            $table->string('gradient_to')->default('#FFE66D');
+            $table->string('color')->default('#5E3C9F');
+            $table->string('gradient_from')->default('#5E3C9F');
+            $table->string('gradient_to')->default('#F4CF3B');
             $table->enum('difficulty', ['easy', 'medium', 'hard'])->default('medium');
             $table->integer('max_time_seconds')->default(120);
             $table->integer('max_points')->default(100);

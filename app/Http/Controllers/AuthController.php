@@ -52,7 +52,7 @@ class AuthController extends Controller
             'contact_email'=>$d['email'],
             'contact_phone'=>$d['contact_phone'] ?? null,
             'emoji'=>['🤖','🚀','⚡','🔥','🌟'][array_rand(['🤖','🚀','⚡','🔥','🌟'])],
-            'color'=>['#FF6B6B','#4ECDC4','#A78BFA','#FFE66D','#FF6B9D'][array_rand(['#FF6B6B','#4ECDC4','#A78BFA','#FFE66D','#FF6B9D'])],
+            'color'=>['#5E3C9F','#F4CF3B','#EAE6FE','#141324'][array_rand(['#5E3C9F','#F4CF3B','#EAE6FE','#141324'])],
         ]);
         Auth::login($user);
         return redirect(route('dashboard'))->with('success','Tim berhasil didaftarkan! Ayo bangun robotmu 🤖');

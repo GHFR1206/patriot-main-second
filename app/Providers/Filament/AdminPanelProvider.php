@@ -29,11 +29,11 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             ->colors([
-                'primary' => Color::hex('#FF6B6B'),
-                'info' => Color::hex('#4ECDC4'),
-                'warning' => Color::hex('#FFE66D'),
-                'success' => Color::hex('#95E1D3'),
-                'danger' => Color::hex('#FF6B9D'),
+                'primary' => Color::hex('#5E3C9F'),
+                'info' => Color::hex('#5E3C9F'),
+                'warning' => Color::hex('#F4CF3B'),
+                'success' => Color::hex('#5E3C9F'),
+                'danger' => Color::hex('#141324'),
             ])
             ->brandName('RoboRace Admin')
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')

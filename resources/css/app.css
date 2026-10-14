@@ -6,21 +6,18 @@
 @theme {
   --font-sans: 'Nunito', 'Fredoka', ui-sans-serif, system-ui, sans-serif;
   --font-display: 'Baloo 2', 'Fredoka', cursive;
-  --color-candy-red: #FF6B6B;
-  --color-candy-yellow: #FFE66D;
-  --color-candy-teal: #4ECDC4;
-  --color-candy-pink: #FF6B9D;
-  --color-candy-mint: #95E1D3;
-  --color-candy-lav: #A78BFA;
-  --color-candy-cream: #FFF8F0;
-  --color-candy-dark: #2D3436;
+  --color-brand-purple: #5E3C9F;
+  --color-brand-lavender: #EAE6FE;
+  --color-brand-yellow: #F4CF3B;
+  --color-brand-navy: #141324;
+  --color-brand-white: #FFFFFF;
 }
 
-* { scrollbar-width: thin; scrollbar-color: #FF6B6B #FFF8F0; }
+* { scrollbar-width: thin; scrollbar-color: #5E3C9F #EAE6FE; }
 
 html { scroll-behavior: smooth; }
 
-body { font-family: var(--font-sans); background: #FFF8F0; }
+body { font-family: var(--font-sans); background: #FFFFFF; }
 
 .font-display { font-family: var(--font-display); }
 
